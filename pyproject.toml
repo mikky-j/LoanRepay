@@ -1,0 +1,38 @@
+[project]
+name = "loanrepay"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Oregunwa Oluwadamilola Michael", email = "moregunwa@gmail.com" },
+]
+dependencies = [
+    "tabulate>=0.9.0",
+    "matplotlib>=3.8.4",
+    "rich>=13.7.1",
+    "numpy>=1.26.4",
+    "pytermgui>=7.7.1",
+    "peewee>=3.17.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/loanrepay"]
+
+# [[tool.rye.sources]]
+# name = "default"
+# url = "https://mirrors.sustech.edu.cn/pypi/web/simple"
+
+[project.scripts]
+main = "loanrepay:main"
